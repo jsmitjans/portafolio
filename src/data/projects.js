@@ -14,7 +14,7 @@ export const projects = [
       '/img/proyectos/panal/3.1-Formulariio_periodo.png',
       '/img/proyectos/panal/4-Solicitudes.png',
       '/img/proyectos/panal/5-Edicion Solicitud.png',
-      '/img/proyectos/panal/6-Historico_solicitud.png',
+      '/img/proyectos/panal/6-historico.png',
       '/img/proyectos/panal/7-Documentos_solicitud.png',
       '/img/proyectos/panal/8-CV.png'
     ],
