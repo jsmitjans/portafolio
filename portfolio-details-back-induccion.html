@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,49 +23,54 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/vendor/fontawesome/css/solid.min.css">
-  <link rel="stylesheet" href="assets/vendor/fontawesome/css/brands.min.css">
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: MyPortfolio
-  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
-  * Updated: Aug 08 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid  position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename text-white">Portafolio</h1>
-      </a>
+    <div class="profile-img">
+      <img src="assets/img/imagen_perfil.JPG" alt="" class="img-fluid rounded-circle">
     </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Jesús Soto Mitjans</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="github"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+      </ul>
+    </nav>
+
   </header>
 
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title light-background">
-      <div class="container">
-        <h1>Sistema de Administración de Inducción</h1>
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Sistema de Administracion de Induccion</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html"><b>Home</b></a></li>
-            <li class="current">Detalles de Administración de Inducción</li>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Detalles de Sistema de Administracion de Induccion</li>
           </ol>
         </nav>
-        <a href="index.html" class="btn btn-dark mt-5"><i class="fas fa-rotate-back"></i> Volver</a>
       </div>
-
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
@@ -85,7 +90,11 @@
                   "autoplay": {
                     "delay": 5000
                   },
-                  "slidesPerView": "auto",
+                  "slidesPerView": 1,
+                  "effect": "fade",
+                  "fadeEffect": {
+                    "crossFade": true
+                  },
                   "pagination": {
                     "el": ".swiper-pagination",
                     "type": "bullets",
@@ -138,15 +147,15 @@
 
               </div>
 
-              <div class="swiper-pagination"></div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Información del proyecto</h3>
+              <h3>Informacion del proyecto</h3>
               <ul>
                 <li><strong>Cliente</strong>: Varios</li>
                 <li><strong>Fecha</strong>: 2020-2025</li>
@@ -154,15 +163,15 @@
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Descripción del sistema</h2>
+              <h2>Descripcion del sistema</h2>
               <p class="text-justify">
-                El sistema de administración de inducción está diseñado para gestionar y controlar todo el proceso de inducción de los colaboradores dentro de una organización. A medida que los colaboradores avanzan en su inducción, se les va asignando y moviendo de una etapa a otra, según su progreso y desempeño. Este sistema permite una visión clara y detallada del avance de cada colaborador, asegurando que completen todas las etapas requeridas.
+                El sistema de administracion de induccion esta disenado para gestionar y controlar todo el proceso de induccion de los colaboradores dentro de una organizacion. A medida que los colaboradores avanzan en su induccion, se les va asignando y moviendo de una etapa a otra, segun su progreso y desempeno. Este sistema permite una vision clara y detallada del avance de cada colaborador, asegurando que completen todas las etapas requeridas.
               </p>
-              <p>Características clave:</p>
+              <p>Caracteristicas clave:</p>
               <ul>
-                <li><b>Control de etapas del proceso:</b> El sistema organiza y gestiona las diferentes etapas del proceso de inducción, asegurando que cada colaborador pase por cada fase de manera adecuada.</li>
-                <li><b>Reportes de seguimiento:</b> Se generan reportes detallados sobre el desempeño y el avance de los colaboradores a lo largo de las etapas, lo que permite a los administradores realizar un seguimiento efectivo del proceso de inducción y tomar decisiones informadas.</li>
-                <li><b>Personalización y adaptación:</b> El sistema puede adaptarse a las necesidades específicas de la organización, permitiendo configuraciones de etapas y acciones que mejor se alineen con los objetivos de la inducción para la empresa.</li>
+                <li><b>Control de etapas del proceso:</b> El sistema organiza y gestiona las diferentes etapas del proceso de induccion, asegurando que cada colaborador pase por cada fase de manera adecuada.</li>
+                <li><b>Reportes de seguimiento:</b> Se generan reportes detallados sobre el desempeno y el avance de los colaboradores a lo largo de las etapas, lo que permite a los administradores realizar un seguimiento efectivo del proceso de induccion y tomar decisiones informadas.</li>
+                <li><b>Personalizacion y adaptacion:</b> El sistema puede adaptarse a las necesidades especificas de la organizacion, permitiendo configuraciones de etapas y acciones que mejor se alineen con los objetivos de la induccion para la empresa.</li>
               </ul>
             </div>
           </div>
@@ -175,7 +184,13 @@
 
   </main>
 
-
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Jesús Soto Mitjans</strong> <span>Todos los derechos reservados</span></p>
+      </div>
+    </div>
+  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -191,6 +206,9 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
