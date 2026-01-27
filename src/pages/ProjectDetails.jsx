@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { getProjectById } from '../data/projects';
+import { getAssetPath } from '../utils/paths';
 
 function ProjectDetails() {
   const { id } = useParams();
@@ -47,7 +48,7 @@ function ProjectDetails() {
 
   const isVideoProject = project.category === 'product';
 
-  const lightboxSlides = project.images ? project.images.map(img => ({ src: img })) : [];
+  const lightboxSlides = project.images ? project.images.map(img => ({ src: getAssetPath(img) })) : [];
 
   const handleImageClick = (index) => {
     setLightboxIndex(index);
@@ -78,10 +79,10 @@ function ProjectDetails() {
                   <video
                     ref={videoRef}
                     controls
-                    poster={project.poster}
+                    poster={getAssetPath(project.poster)}
                     style={{ width: '100%', maxHeight: '500px', backgroundColor: '#000' }}
                   >
-                    <source src={project.video} type="video/mp4" />
+                    <source src={getAssetPath(project.video)} type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
                   </video>
                 </div>
@@ -97,7 +98,7 @@ function ProjectDetails() {
                     {project.images && project.images.map((image, index) => (
                       <SwiperSlide key={index}>
                         <img
-                          src={image}
+                          src={getAssetPath(image)}
                           alt={`${project.title} - Imagen ${index + 1}`}
                           onClick={() => handleImageClick(index)}
                           style={{ cursor: 'pointer' }}

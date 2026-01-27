@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import { getAssetPath } from '../../utils/paths';
 
 function Hero() {
   const typedRef = useRef(null);
@@ -30,7 +31,7 @@ function Hero() {
 
   return (
     <section id="inicio" className="hero section dark-background">
-      <img src="/img/fondo.jpg" alt="" />
+      <img src={getAssetPath('/img/fondo.jpg')} alt="" />
 
       <div className="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Jesús Soto Mitjans</h2>

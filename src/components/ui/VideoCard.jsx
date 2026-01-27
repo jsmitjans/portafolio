@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../../utils/paths';
 
 function VideoCard({ project, onPreview }) {
   return (
     <div className="portfolio-content h-100">
-      <img src={project.thumbnail} className="img-fluid" alt={project.title} />
+      <img src={getAssetPath(project.thumbnail)} className="img-fluid" alt={project.title} />
       <div className="portfolio-info">
         <h4>{project.title}</h4>
         <p>{project.company}</p>

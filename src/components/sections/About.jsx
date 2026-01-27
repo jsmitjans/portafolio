@@ -1,3 +1,5 @@
+import { getAssetPath } from '../../utils/paths';
+
 function About() {
   return (
     <section id="sobre-mi" className="about section">
@@ -8,7 +10,7 @@ function About() {
       <div className="container" data-aos="fade-up" data-aos-delay="100">
         <div className="row gy-4 justify-content-center">
           <div className="col-lg-4">
-            <img src="/img/imagen_perfil.JPG" className="img-fluid" alt="" />
+            <img src={getAssetPath('/img/imagen_perfil.JPG')} className="img-fluid" alt="" />
           </div>
           <div className="col-lg-8 content">
             <h2>Desarrollador Full Stack</h2>

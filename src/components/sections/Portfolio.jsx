@@ -8,6 +8,7 @@ import 'yet-another-react-lightbox/styles.css';
 import { projects } from '../../data/projects';
 import ProjectCard from '../ui/ProjectCard';
 import VideoCard from '../ui/VideoCard';
+import { getAssetPath } from '../../utils/paths';
 
 const filters = [
   { key: '*', label: 'Todo' },
@@ -56,7 +57,7 @@ function Portfolio() {
 
   const openImageLightbox = useCallback((project) => {
     if (project.images && project.images.length > 0) {
-      const slides = project.images.map(img => ({ src: img }));
+      const slides = project.images.map(img => ({ src: getAssetPath(img) }));
       setLightboxSlides(slides);
       setLightboxIndex(0);
       setLightboxOpen(true);
@@ -67,8 +68,8 @@ function Portfolio() {
     if (project.video) {
       const slides = [{
         type: 'video',
-        sources: [{ src: project.video, type: 'video/mp4' }],
-        poster: project.poster
+        sources: [{ src: getAssetPath(project.video), type: 'video/mp4' }],
+        poster: getAssetPath(project.poster)
       }];
       setLightboxSlides(slides);
       setLightboxIndex(0);

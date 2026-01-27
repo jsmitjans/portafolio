@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getAssetPath } from '../../utils/paths';
 
 const navItems = [
   { id: 'inicio', label: 'Inicio', icon: 'bi-house' },
@@ -47,7 +48,7 @@ function Header({ activeSection }) {
         ></i>
 
         <div className="profile-img">
-          <img src="/img/imagen_perfil.JPG" alt="Jesús Soto Mitjans" className="img-fluid rounded-circle" />
+          <img src={getAssetPath('/img/imagen_perfil.JPG')} alt="Jesús Soto Mitjans" className="img-fluid rounded-circle" />
         </div>
 
         <Link to="/" className="logo d-flex align-items-center justify-content-center">
