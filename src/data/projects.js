@@ -18,8 +18,11 @@ export const projects = [
       '/img/proyectos/panal/7-Documentos_solicitud.png',
       '/img/proyectos/panal/8-CV.png'
     ],
-    description: 'Sistema de gestión de evaluadores para el proceso de certificación de competencias laborales. Permite administrar evaluadores, gestionar evaluaciones, generar reportes y controlar perfiles de usuario con diferentes niveles de acceso.',
-    technologies: ['Symfony', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
+    description: [
+      'PANAL es el sistema utilizado por ChileValora, institución responsable del Sistema Nacional de Certificación de Competencias Laborales. A través de esta plataforma se acreditan centros de evaluación y certificación, los cuales cuentan con evaluadores certificados encargados de validar las competencias laborales de los postulantes.',
+      'En este proyecto desarrollé el módulo de gestión de evaluadores, el cual permite evaluar, certificar e incorporar de forma automatizada a los evaluadores de cada centro. Anteriormente este proceso se realizaba de manera manual, ingresando directamente los nombres de los evaluadores seleccionados al sistema.'
+    ],
+    technologies: ['Spring MVC', 'MySQL', 'Bootstrap', 'jQuery']
   },
   {
     id: 'bidat',
@@ -40,8 +43,18 @@ export const projects = [
       '/img/proyectos/bidat/6-graficos-rraa.png',
       '/img/proyectos/bidat/8-carga_masiva_datos.png'
     ],
-    description: 'Banco Integrado de Datos con visualizaciones de datos de la encuesta CASEN, registro social de hogares e inversión pública. Plataforma de consulta y análisis de indicadores sociales con filtros dinámicos y exportación de datos.',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'D3.js', 'Bootstrap']
+    description: [
+      'En este proyecto desarrollé el módulo de Visualizaciones para el Banco Integrado de Datos (BIDAT) del Ministerio de Desarrollo Social y Familia. El objetivo principal fue centralizar en una única plataforma diversos reportes que anteriormente se encontraban dispersos en archivos Excel o en sistemas separados.',
+      {
+        title: 'Reportes implementados:',
+        items: [
+          { bold: 'Encuesta CASEN:', text: 'Visualización de los resultados de la Encuesta de Caracterización Socioeconómica Nacional.' },
+          { bold: 'Registro Social de Hogares:', text: 'Reportes con datos del registro que caracteriza la situación socioeconómica de los hogares chilenos.' },
+          { bold: 'Banco Integrado de Inversión Pública:', text: 'Información consolidada sobre proyectos de inversión pública.' }
+        ]
+      }
+    ],
+    technologies: ['Laravel', 'Lumen', 'PostgreSQL', 'Bootstrap', 'jQuery']
   },
   {
     id: 'induccion-front',
@@ -61,7 +74,10 @@ export const projects = [
       '/img/proyectos/induccion-front/Progreso_act.png',
       '/img/proyectos/induccion-front/Progreso_act2.png'
     ],
-    description: 'Sistema de inducción para nuevos empleados con módulos de contenido interactivo, evaluaciones y seguimiento de progreso. Permite a las empresas crear programas de onboarding personalizados.',
+    description: [
+      'Los sistemas de inducción están diseñados para guiar a los nuevos colaboradores en su integración a la empresa. A través de la plataforma, los usuarios pueden acceder a diferentes módulos de contenido relacionados con los procesos y funciones de la organización. Cada módulo puede ser valorado por el colaborador y cuenta con una evaluación para verificar la comprensión del contenido.',
+      'Además, estos sistemas permiten visualizar las distintas etapas del proceso de inducción, mostrando por cuáles ha pasado el colaborador, en cuál se encuentra actualmente y su progreso general en los módulos asignados.'
+    ],
     technologies: ['PHP', 'Yii2', 'MySQL', 'Bootstrap', 'jQuery']
   },
   {
@@ -80,7 +96,17 @@ export const projects = [
       '/img/proyectos/induccion-back/detalle_colaborador_induccion_1.png',
       '/img/proyectos/induccion-back/admin_induccionficha_usuario_ampliado.png'
     ],
-    description: 'Panel de administración para gestionar programas de inducción. Permite configurar etapas, asignar empleados, crear contenidos, diseñar evaluaciones y generar certificados de completitud.',
+    description: [
+      'El sistema de administración de inducción está diseñado para gestionar y controlar todo el proceso de inducción de los colaboradores dentro de una organización. A medida que los colaboradores avanzan en su inducción, se les va asignando y moviendo de una etapa a otra, según su progreso y desempeño. Este sistema permite una visión clara y detallada del avance de cada colaborador, asegurando que completen todas las etapas requeridas.',
+      {
+        title: 'Características clave:',
+        items: [
+          { bold: 'Control de etapas del proceso:', text: 'El sistema organiza y gestiona las diferentes etapas del proceso de inducción, asegurando que cada colaborador pase por cada fase de manera adecuada.' },
+          { bold: 'Reportes de seguimiento:', text: 'Se generan reportes detallados sobre el desempeño y el avance de los colaboradores a lo largo de las etapas, lo que permite a los administradores realizar un seguimiento efectivo del proceso de inducción y tomar decisiones informadas.' },
+          { bold: 'Personalización y adaptación:', text: 'El sistema puede adaptarse a las necesidades específicas de la organización, permitiendo configuraciones de etapas y acciones que mejor se alineen con los objetivos de la inducción para la empresa.' }
+        ]
+      }
+    ],
     technologies: ['PHP', 'Yii2', 'MySQL', 'Bootstrap', 'jQuery']
   },
   {
@@ -137,7 +163,7 @@ export const projects = [
   },
   {
     id: 'lms',
-    title: 'LMS',
+    title: 'Sistema LMS',
     company: 'RRHH3D',
     client: 'Varios',
     category: 'app',
@@ -161,14 +187,24 @@ export const projects = [
       '/img/proyectos/lms/matricular_colaboradores.png',
       '/img/proyectos/lms/nomina.png'
     ],
-    description: 'Sistema de Gestión de Aprendizaje completo con gestión de cursos, contenidos multimedia, evaluaciones, certificados automáticos, seguimiento de progreso y reportes de cumplimiento.',
+    description: [
+      'Un Sistema de Gestión de Aprendizaje (LMS) es una plataforma diseñada para gestionar, administrar, entregar y monitorear el proceso de aprendizaje dentro de una organización o institución educativa. Este tipo de sistema facilita tanto la creación y distribución de contenido educativo como el seguimiento y evaluación del rendimiento de los estudiantes o empleados.',
+      {
+        title: 'Características clave:',
+        items: [
+          { bold: 'Gestión de cursos:', text: 'Este sistema permite a los administradores crear, organizar y administrar cursos o módulos de capacitación, con la posibilidad de estructurar el contenido en unidades, evaluaciones y materiales multimedia.' },
+          { bold: 'Acceso a contenido:', text: 'Los estudiantes o empleados pueden acceder al contenido educativo en línea en cualquier momento y desde cualquier lugar, proporcionando flexibilidad en el aprendizaje.' },
+          { bold: 'Seguimiento y evaluación:', text: 'Los administradores o instructores pueden monitorear el progreso de los estudiantes, evaluar su rendimiento a través de evaluaciones y cuestionarios, y generar informes detallados sobre su desempeño.' }
+        ]
+      }
+    ],
     technologies: ['PHP', 'Yii2', 'MySQL', 'Bootstrap', 'jQuery', 'SCORM']
   },
   {
     id: 'brisas',
-    title: 'Las Brisas Santo Domingo',
+    title: 'Sitio web Las Brisas',
     company: 'ASSERTSOFT',
-    client: 'Las Brisas',
+    client: '-',
     category: 'app',
     date: '2018 - 2020',
     thumbnail: '/img/proyectos/brisas/home_brisas.jpg',
@@ -182,7 +218,7 @@ export const projects = [
       '/img/proyectos/brisas/admin1.PNG',
       '/img/proyectos/brisas/admin2.PNG'
     ],
-    description: 'Portal inmobiliario para compra, venta y arriendo de propiedades con búsqueda avanzada, galería de imágenes, formulario de contacto y panel de administración para gestión de propiedades.',
+    description: 'Sitio web para la compra, venta y arriendo de casas y departamentos.',
     technologies: ['PHP', 'Laravel', 'MySQL', 'Bootstrap', 'jQuery']
   },
   {
@@ -200,21 +236,21 @@ export const projects = [
       '/img/proyectos/municipalidades/form.png',
       '/img/proyectos/municipalidades/panel.png'
     ],
-    description: 'Sistema de postulación para municipalidades chilenas al programa de distinciones turísticas de Sernatur. Permite gestionar formularios, evaluar postulaciones y generar reportes de resultados.',
+    description: 'Sistema de postulación para las municipalidades de Chile, el cual permite a estas postular a una distinción otorgada por Sernatur.',
     technologies: ['PHP', 'Symfony', 'PostgreSQL', 'Bootstrap']
   },
   {
     id: 'south',
-    title: 'South Investment',
+    title: 'Sitio web South Investment',
     company: 'ASSERTSOFT',
-    client: 'South Investment',
+    client: '-',
     category: 'app',
     date: '2018 - 2020',
     thumbnail: '/img/proyectos/home_south.png',
     images: [
       '/img/proyectos/home_south.png'
     ],
-    description: 'Sitio web inmobiliario para inversionistas con catálogo de propiedades, información de proyectos y formulario de contacto para potenciales compradores e inversionistas.',
+    description: 'Sitio web para la compra, venta y arriendo de casas y departamentos.',
     technologies: ['PHP', 'Laravel', 'MySQL', 'Bootstrap']
   },
   {
@@ -231,12 +267,12 @@ export const projects = [
       '/img/proyectos/onfield/Historial de Chips.png',
       '/img/proyectos/onfield/Movimiento de Chips.png'
     ],
-    description: 'Sistema de gestión de ventas para distribución de chips con seguimiento de puntos de venta, control de inventario, reportes de ventas e integración con aplicación móvil de vendedores.',
+    description: 'Sistema de gestión de todo el proceso de ventas de chips de la Empresa Claro. Permite asignarle chips y puntos de ventas a los vendedores. Cuando un vendedor vende un chip debe registrarlo en una app móvil, la cual envía los datos de venta al sistema mediante una API. El sistema permite ver el historial de chips vendidos y los puntos de ventas asignados a cada vendedor.',
     technologies: ['PHP', 'Symfony', 'MySQL', 'Bootstrap', 'API REST']
   },
   {
     id: 'sgi',
-    title: 'Miembros SGI Cuba',
+    title: 'Sistema Miembros SGI Cuba',
     company: 'Freelancer',
     client: 'Logia en Cuba',
     category: 'app',
@@ -251,14 +287,14 @@ export const projects = [
       '/img/proyectos/sgi/form3.png',
       '/img/proyectos/sgi/configuracion.png'
     ],
-    description: 'Sistema de gestión de miembros para organización masónica con registro de afiliados, gestión de logias, calendario de eventos, cuotas y generación de reportes administrativos.',
+    description: 'Sistema de gestión de todos los miembros de una logia, donde se pueden gestionar los datos de cada miembro, así como su estado dentro de la logia.',
     technologies: ['PHP', 'Yii2', 'MySQL', 'Bootstrap']
   },
   {
     id: 'riesgos',
-    title: 'Gestión de Riesgos',
+    title: 'Sistema de Gestión de Riesgos',
     company: 'CECMED',
-    client: 'CECMED',
+    client: '-',
     category: 'app',
     date: '2015 - 2018',
     thumbnail: '/img/proyectos/riesgos/portada.png',
@@ -268,14 +304,14 @@ export const projects = [
       '/img/proyectos/riesgos/Insercion.png',
       '/img/proyectos/riesgos/usuarios.png'
     ],
-    description: 'Sistema de identificación, evaluación y mitigación de riesgos organizacionales con matrices de probabilidad-impacto, planes de acción y seguimiento de indicadores de gestión.',
+    description: 'Sistema de gestión de riesgos diseñado para identificar, evaluar, monitorear y mitigar los riesgos que pueden afectar el logro de los objetivos organizacionales. Este sistema tiene como objetivo principal minimizar las amenazas y aprovechar las oportunidades para mejorar la capacidad y el rendimiento de la empresa.',
     technologies: ['PHP', 'Yii2', 'MySQL', 'Bootstrap']
   },
   {
     id: 'eval-cap',
-    title: 'Evaluación y Capacitación',
+    title: 'Sistema de Gestión de Evaluación y Capacitación',
     company: 'CECMED',
-    client: 'CECMED',
+    client: '-',
     category: 'app',
     date: '2015 - 2018',
     thumbnail: '/img/proyectos/eval-cap/portada.png',
@@ -292,14 +328,14 @@ export const projects = [
       '/img/proyectos/eval-cap/portada mod1(hightchart).png',
       '/img/proyectos/eval-cap/portada mod2.png'
     ],
-    description: 'Sistema de evaluación de desempeño y gestión de capacitaciones con planificación de cursos, registro de asistencia, emisión de certificados y reportes de cumplimiento de formación.',
+    description: 'Sistema de gestión de evaluación y capacitación que permite crear evaluaciones de desempeño anuales y evaluar a los colaboradores. Permite también asignar cursos de capacitación a los colaboradores y guardar los certificados de los mismos una vez realizados.',
     technologies: ['PHP', 'Yii2', 'MySQL', 'Bootstrap']
   },
   {
     id: 'getel',
-    title: 'Gestión Telefónica',
+    title: 'Sistema de Gestión Telefónica',
     company: 'CECMED',
-    client: 'CECMED',
+    client: '-',
     category: 'app',
     date: '2015 - 2018',
     thumbnail: '/img/proyectos/getel/portada.png',
@@ -312,14 +348,14 @@ export const projects = [
       '/img/proyectos/getel/gastos por persona.png',
       '/img/proyectos/getel/reportes.png'
     ],
-    description: 'Sistema de control de gastos telefónicos con registro de llamadas, asignación de extensiones por departamento, filtros de análisis y reportes de consumo con gráficos estadísticos.',
+    description: 'Sistema de gestión telefónica que permite tener un control de los gastos telefónicos de la empresa, permitiendo filtrar las llamadas por diferentes criterios. El sistema obtiene los registros de llamadas de la pizarra telefónica y los almacena en una base de datos, que luego se utiliza para generar los diferentes reportes.',
     technologies: ['PHP', 'Yii2', 'MySQL', 'Bootstrap', 'Chart.js']
   },
   {
     id: 'materiales-referencia',
-    title: 'Materiales de Referencia',
+    title: 'Sistema Materiales de Referencia',
     company: 'CECMED',
-    client: 'CECMED',
+    client: '-',
     category: 'app',
     date: '2015 - 2018',
     thumbnail: '/img/proyectos/materiales-referencias/portada.png',
@@ -329,35 +365,35 @@ export const projects = [
       '/img/proyectos/materiales-referencias/materiales.png',
       '/img/proyectos/materiales-referencias/Insercion.png'
     ],
-    description: 'Sistema de registro y gestión de materiales de referencia de laboratorio con control de inventario, trazabilidad, fechas de vencimiento y certificados de análisis.',
+    description: 'Sistema de gestión para registrar todos los materiales utilizados en los laboratorios del CECMED.',
     technologies: ['PHP', 'Yii2', 'MySQL', 'Bootstrap']
   },
   {
     id: 'cecmed-web',
     title: 'Sitio Web CECMED',
     company: 'CECMED',
-    client: 'CECMED',
+    client: '-',
     category: 'app',
     date: '2015 - 2018',
     thumbnail: '/img/proyectos/cecmed/web CECMED.png',
     images: [
       '/img/proyectos/cecmed/web CECMED.png'
     ],
-    description: 'Sitio web público del Centro Estatal para el Control de Medicamentos, Equipos y Dispositivos Médicos de Cuba con información institucional, normativas, trámites y noticias del sector.',
+    description: 'Sitio web del Centro para el Control Estatal de Medicamentos, Equipos y Dispositivos Médicos (CECMED) de Cuba.',
     technologies: ['Drupal', 'PHP', 'MySQL', 'CSS']
   },
   {
     id: 'cecmed-intranet',
     title: 'Intranet CECMED',
     company: 'CECMED',
-    client: 'CECMED',
+    client: '-',
     category: 'app',
     date: '2015 - 2018',
     thumbnail: '/img/proyectos/cecmed/intranet cecmed.png',
     images: [
       '/img/proyectos/cecmed/intranet cecmed.png'
     ],
-    description: 'Portal intranet para el personal de CECMED con acceso a documentos internos, directorio de empleados, calendario institucional, noticias internas y enlaces a sistemas corporativos.',
+    description: 'Intranet del Centro para el Control Estatal de Medicamentos, Equipos y Dispositivos Médicos (CECMED) de Cuba.',
     technologies: ['Drupal', 'PHP', 'MySQL', 'CSS']
   }
 ];

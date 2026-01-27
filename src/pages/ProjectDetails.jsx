@@ -26,11 +26,11 @@ function ProjectDetails() {
     return (
       <main className="main">
         <div className="page-title dark-background">
-          <div className="container">
-            <h1>Proyecto no encontrado</h1>
+          <div className="container d-lg-flex justify-content-between align-items-center">
+            <h1 className="mb-2 mb-lg-0">Proyecto no encontrado</h1>
             <nav className="breadcrumbs">
               <ol>
-                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/">Home</Link></li>
                 <li className="current">Error</li>
               </ol>
             </nav>
@@ -55,16 +55,46 @@ function ProjectDetails() {
     setLightboxOpen(true);
   };
 
+  const renderDescription = () => {
+    if (typeof project.description === 'string') {
+      return <p>{project.description}</p>;
+    }
+
+    if (Array.isArray(project.description)) {
+      return project.description.map((item, index) => {
+        if (typeof item === 'string') {
+          return <p key={index}>{item}</p>;
+        }
+        if (typeof item === 'object' && item.title && item.items) {
+          return (
+            <div key={index}>
+              <p>{item.title}</p>
+              <ul>
+                {item.items.map((listItem, listIndex) => (
+                  <li key={listIndex}>
+                    <b>{listItem.bold}</b> {listItem.text}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+        return null;
+      });
+    }
+
+    return null;
+  };
+
   return (
     <main className="main">
       <div className="page-title dark-background" data-aos="fade">
-        <div className="container">
-          <h1>{project.title}</h1>
+        <div className="container d-lg-flex justify-content-between align-items-center">
+          <h1 className="mb-2 mb-lg-0">{project.title}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Inicio</Link></li>
-              <li><Link to="/" state={{ scrollTo: 'proyectos' }}>Proyectos</Link></li>
-              <li className="current">{project.title}</li>
+              <li><Link to="/">Home</Link></li>
+              <li className="current">Detalles de {project.title}</li>
             </ol>
           </nav>
         </div>
@@ -112,23 +142,17 @@ function ProjectDetails() {
 
             <div className="col-lg-4">
               <div className="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-                <h3>Información del Proyecto</h3>
+                <h3>Información del proyecto</h3>
                 <ul>
-                  <li><strong>Proyecto</strong>: {project.title}</li>
-                  {project.client && <li><strong>Cliente</strong>: {project.client}</li>}
-                  <li><strong>Empresa</strong>: {project.company}</li>
+                  {project.client && project.client !== '-' && <li><strong>Cliente</strong>: {project.client}</li>}
                   <li><strong>Fecha</strong>: {project.date}</li>
-                  {project.technologies && (
-                    <li>
-                      <strong>Tecnologías</strong>: {project.technologies.join(', ')}
-                    </li>
-                  )}
+                  <li><strong>Empresa</strong>: {project.company}</li>
                 </ul>
               </div>
 
               <div className="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-                <h2>Descripción</h2>
-                <p>{project.description}</p>
+                <h2>Descripción del proyecto</h2>
+                {renderDescription()}
               </div>
 
               <div className="mt-4" data-aos="fade-up" data-aos-delay="400">
