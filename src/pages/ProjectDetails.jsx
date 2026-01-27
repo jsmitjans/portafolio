@@ -39,7 +39,7 @@ function ProjectDetails() {
         <section className="section">
           <div className="container">
             <p>El proyecto solicitado no existe.</p>
-            <Link to="/#proyectos" className="btn btn-primary">Volver a proyectos</Link>
+            <Link to="/" state={{ scrollTo: 'proyectos' }} className="btn btn-primary">Volver a proyectos</Link>
           </div>
         </section>
       </main>
@@ -63,7 +63,7 @@ function ProjectDetails() {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">Inicio</Link></li>
-              <li><Link to="/#proyectos">Proyectos</Link></li>
+              <li><Link to="/" state={{ scrollTo: 'proyectos' }}>Proyectos</Link></li>
               <li className="current">{project.title}</li>
             </ol>
           </nav>
@@ -132,7 +132,7 @@ function ProjectDetails() {
               </div>
 
               <div className="mt-4" data-aos="fade-up" data-aos-delay="400">
-                <Link to="/#proyectos" className="btn btn-primary">
+                <Link to="/" state={{ scrollTo: 'proyectos' }} className="btn btn-primary">
                   <i className="bi bi-arrow-left me-2"></i>
                   Volver a proyectos
                 </Link>
