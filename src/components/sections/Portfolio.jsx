@@ -23,17 +23,16 @@ function Portfolio() {
   const isotope = useRef(null);
 
   useEffect(() => {
-    if (gridRef.current) {
-      imagesLoaded(gridRef.current, () => {
-        isotope.current = new Isotope(gridRef.current, {
-          itemSelector: '.portfolio-item',
-          layoutMode: 'masonry',
-          masonry: {
-            columnWidth: '.portfolio-item'
-          }
-        });
+    if (!gridRef.current) return;
+
+    imagesLoaded(gridRef.current, () => {
+      isotope.current = new Isotope(gridRef.current, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
       });
-    }
+      isotope.current.arrange({ filter: '*' });
+      isotope.current.layout();
+    });
 
     return () => {
       if (isotope.current) {
@@ -43,10 +42,11 @@ function Portfolio() {
   }, []);
 
   useEffect(() => {
-    if (isotope.current) {
-      const filterValue = activeFilter === '*' ? '*' : `.filter-${activeFilter}`;
-      isotope.current.arrange({ filter: filterValue });
-    }
+    if (!isotope.current) return;
+
+    const filterValue = activeFilter === '*' ? '*' : `.filter-${activeFilter}`;
+    isotope.current.arrange({ filter: filterValue });
+    isotope.current.layout();
   }, [activeFilter]);
 
   const handleFilterClick = (filterKey) => {
@@ -62,6 +62,13 @@ function Portfolio() {
     }
   }, []);
 
+  const refreshLayout = useCallback(() => {
+    if (!isotope.current) return;
+    const filterValue = activeFilter === '*' ? '*' : `.filter-${activeFilter}`;
+    isotope.current.arrange({ filter: filterValue });
+    isotope.current.layout();
+  }, [activeFilter]);
+
   return (
     <section id="proyectos" className="portfolio section light-background">
       <div className="container section-title" data-aos="fade-up">
@@ -70,7 +77,7 @@ function Portfolio() {
       </div>
 
       <div className="container">
-        <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div className="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
           <ul className="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
             {filters.map((filter) => (
               <li
@@ -95,7 +102,11 @@ function Portfolio() {
                     onPreview={() => openImageLightbox(project)}
                   />
                 ) : (
-                  <VideoCard project={project} />
+                  <VideoCard
+                    project={project}
+                    onMediaReady={refreshLayout}
+                    matchImageSize={activeFilter === '*'}
+                  />
                 )}
               </div>
             ))}

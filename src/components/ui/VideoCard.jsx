@@ -1,12 +1,13 @@
 ﻿import { useState } from 'react';
 import { getAssetPath } from '../../utils/paths';
 
-function VideoCard({ project }) {
+function VideoCard({ project, onMediaReady, matchImageSize = false }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const poster = project.poster || project.thumbnail;
+  const videoContentClass = `portfolio-content video-content${matchImageSize ? ' video-content-all' : ''}`;
 
   return (
-    <div className="portfolio-content video-content h-100" style={{ position: 'relative' }}>
+    <div className={videoContentClass} style={{ position: 'relative' }}>
       <video
         controls
         preload="metadata"
@@ -16,6 +17,8 @@ function VideoCard({ project }) {
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onEnded={() => setIsPlaying(false)}
+        onLoadedMetadata={onMediaReady}
+        onCanPlay={onMediaReady}
       >
         <source src={getAssetPath(project.video)} type="video/mp4" />
         Tu navegador no soporta el elemento de video.

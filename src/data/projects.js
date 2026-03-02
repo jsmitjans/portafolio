@@ -1,4 +1,30 @@
-export const projects = [
+﻿export const projects = [
+  {
+    id: 'clave-unica-chatbot',
+    title: 'Integración ClaveÚnica - Chatbot ChileValora',
+    company: 'Babel',
+    client: 'ChileValora',
+    category: 'product',
+    date: '2026',
+    thumbnail: '/video/poster/clave_unica.jpg',
+    video: '/video/c_unica.mp4',
+    poster: '/video/poster/clave_unica.jpg',
+    description: 'Implementación del flujo de autenticación con ClaveÚnica para el chatbot institucional de ChileValora.',
+    technologies: ['React', 'Node.js', 'AWS Lambda', 'OAuth2/OpenID']
+  },
+  {
+    id: 'whatsapp-chatbot-chilevalora',
+    title: 'Envío Masivo WhatsApp - Chatbot ChileValora',
+    company: 'Babel',
+    client: 'ChileValora',
+    category: 'product',
+    date: '2026',
+    thumbnail: '/video/poster/wsp_chatbot.jpg',
+    video: '/video/wsp_chatbot.mp4',
+    poster: '/video/poster/wsp_chatbot.jpg',
+    description: 'Flujo de selección de usuarios, encolamiento y envío masivo de templates de WhatsApp con seguimiento de estado.',
+    technologies: ['React', 'Node.js', 'AWS SQS', 'WhatsApp API']
+  },
   {
     id: 'panal',
     title: 'PANAL',
@@ -148,32 +174,8 @@ export const projects = [
     description: 'API intermediaria para integración con Twilio que permite enviar notificaciones y recordatorios por WhatsApp a empleados sobre cursos, evaluaciones y vencimientos de certificaciones.',
     technologies: ['PHP', 'Slim', 'Twilio API', 'MySQL']
   },
-    {
-    id: 'clave-unica-chatbot',
-    title: 'Integración ClaveÚnica - Chatbot ChileValora',
-    company: 'Babel',
-    client: 'ChileValora',
-    category: 'product',
-    date: '2026',
-    thumbnail: '/video/poster/clave_unica.jpg',
-    video: '/video/c_unica.mp4',
-    poster: '/video/poster/clave_unica.jpg',
-    description: 'Implementación del flujo de autenticación con ClaveÚnica para el chatbot institucional de ChileValora.',
-    technologies: ['React', 'Node.js', 'AWS Lambda', 'OAuth2/OpenID']
-  },
-  {
-    id: 'whatsapp-chatbot-chilevalora',
-    title: 'Envío Masivo WhatsApp - Chatbot ChileValora',
-    company: 'Babel',
-    client: 'ChileValora',
-    category: 'product',
-    date: '2026',
-    thumbnail: '/video/poster/wsp_chatbot.jpg',
-    video: '/video/wsp_chatbot.mp4',
-    poster: '/video/poster/wsp_chatbot.jpg',
-    description: 'Flujo de selección de usuarios, encolamiento y envío masivo de templates de WhatsApp con seguimiento de estado.',
-    technologies: ['React', 'Node.js', 'AWS SQS', 'WhatsApp API']
-  },
+    
+  
 {
     id: 'generacion-documento',
     title: 'Personalización de Documento',
@@ -432,3 +434,5 @@ export const getProjectsByCategory = (category) => {
   if (category === 'all') return projects;
   return projects.filter(project => project.category === category);
 };
+
+
