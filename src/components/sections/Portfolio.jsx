@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+﻿import { useState, useEffect, useRef, useCallback } from 'react';
 import Isotope from 'isotope-layout';
 import imagesLoaded from 'imagesloaded';
 import Lightbox from 'yet-another-react-lightbox';
-import Video from 'yet-another-react-lightbox/plugins/video';
 import 'yet-another-react-lightbox/styles.css';
 import { projects } from '../../data/projects';
 import ProjectCard from '../ui/ProjectCard';
@@ -57,20 +55,7 @@ function Portfolio() {
 
   const openImageLightbox = useCallback((project) => {
     if (project.images && project.images.length > 0) {
-      const slides = project.images.map(img => ({ src: getAssetPath(img) }));
-      setLightboxSlides(slides);
-      setLightboxIndex(0);
-      setLightboxOpen(true);
-    }
-  }, []);
-
-  const openVideoLightbox = useCallback((project) => {
-    if (project.video) {
-      const slides = [{
-        type: 'video',
-        sources: [{ src: getAssetPath(project.video), type: 'video/mp4' }],
-        poster: getAssetPath(project.poster)
-      }];
+      const slides = project.images.map((img) => ({ src: getAssetPath(img) }));
       setLightboxSlides(slides);
       setLightboxIndex(0);
       setLightboxOpen(true);
@@ -110,10 +95,7 @@ function Portfolio() {
                     onPreview={() => openImageLightbox(project)}
                   />
                 ) : (
-                  <VideoCard
-                    project={project}
-                    onPreview={() => openVideoLightbox(project)}
-                  />
+                  <VideoCard project={project} />
                 )}
               </div>
             ))}
@@ -126,7 +108,6 @@ function Portfolio() {
         close={() => setLightboxOpen(false)}
         index={lightboxIndex}
         slides={lightboxSlides}
-        plugins={[Video]}
       />
     </section>
   );

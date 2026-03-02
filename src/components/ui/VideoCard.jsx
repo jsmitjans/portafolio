@@ -1,28 +1,27 @@
-import { Link } from 'react-router-dom';
+﻿import { useState } from 'react';
 import { getAssetPath } from '../../utils/paths';
 
-function VideoCard({ project, onPreview }) {
+function VideoCard({ project }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const poster = project.poster || project.thumbnail;
+
   return (
-    <div className="portfolio-content h-100">
-      <img src={getAssetPath(project.thumbnail)} className="img-fluid" alt={project.title} />
-      <div className="portfolio-info">
-        <h4>{project.title}</h4>
-        <p>{project.company}</p>
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            onPreview();
-          }}
-          className="preview-link"
-          title="Ver video"
-        >
-          <i className="bi bi-play-circle"></i>
-        </a>
-        <Link to={`/proyecto/${project.id}`} className="details-link" title="Más detalles">
-          <i className="bi bi-link-45deg"></i>
-        </Link>
-      </div>
+    <div className="portfolio-content video-content h-100" style={{ position: 'relative' }}>
+      <video
+        controls
+        preload="metadata"
+        playsInline
+        className="portfolio-video"
+        poster={poster ? getAssetPath(poster) : undefined}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+        onEnded={() => setIsPlaying(false)}
+      >
+        <source src={getAssetPath(project.video)} type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video>
+
+      {!isPlaying && <div className="dv-texto-video">{project.title}</div>}
     </div>
   );
 }
