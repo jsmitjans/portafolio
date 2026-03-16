@@ -5,6 +5,7 @@ import { getAssetPath } from '../../utils/paths';
 const navItems = [
   { id: 'inicio', label: 'Inicio', icon: 'bi-house' },
   { id: 'sobre-mi', label: 'Sobre Mí', icon: 'bi-person' },
+  { id: 'habilidades', label: 'Habilidades', icon: 'bi-stars' },
   { id: 'experiencia', label: 'Experiencia Profesional', icon: 'bi-file-earmark-text' },
   { id: 'proyectos', label: 'Proyectos', icon: 'bi-images' }
 ];

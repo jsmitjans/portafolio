@@ -1,3 +1,4 @@
+import { getAssetPath } from '../../utils/paths';
 import { skills } from '../../data/skills';
 
 function Skills() {
@@ -15,12 +16,23 @@ function Skills() {
                 <h5><i className={skill.icon}></i> {skill.title}</h5>
                 <div className="skill-icons">
                   {skill.technologies.map((tech, index) => (
-                    <i
-                      key={index}
-                      className={tech.icon}
-                      style={tech.style || {}}
-                      title={tech.name}
-                    ></i>
+                    tech.image ? (
+                      <img
+                        key={index}
+                        src={getAssetPath(tech.image)}
+                        style={tech.style || {}}
+                        title={tech.name}
+                        alt={tech.name}
+                        className="skill-image"
+                      />
+                    ) : (
+                      <i
+                        key={index}
+                        className={tech.icon}
+                        style={tech.style || {}}
+                        title={tech.name}
+                      ></i>
+                    )
                   ))}
                 </div>
               </div>

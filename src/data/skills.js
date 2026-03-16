@@ -1,25 +1,27 @@
 export const skills = [
   {
     id: 'frontend',
-    title: 'HTML, CSS, Javascript, jQuery, Bootstrap',
+    title: 'HTML, CSS, Javascript, TypeScript, jQuery, Bootstrap',
     icon: 'bi bi-code-slash',
     technologies: [
       { name: 'HTML5', icon: 'devicon-html5-plain colored' },
       { name: 'CSS3', icon: 'devicon-css3-plain colored' },
       { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+      { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
       { name: 'jQuery', icon: 'devicon-jquery-plain colored' },
       { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' }
     ]
   },
   {
     id: 'php',
-    title: 'PHP, Symfony, Yii2, Laravel',
+    title: 'PHP, Symfony, Yii2, Laravel, Lumen',
     icon: 'bi bi-braces',
     technologies: [
       { name: 'PHP', icon: 'devicon-php-plain colored' },
       { name: 'Symfony', icon: 'devicon-symfony-original colored' },
       { name: 'Yii2', icon: 'devicon-yii-plain colored' },
-      { name: 'Laravel', icon: 'devicon-laravel-original colored' }
+      { name: 'Laravel', icon: 'devicon-laravel-original colored' },
+      { name: 'Lumen', icon: 'devicon-lumen-plain colored' }
     ]
   },
   {
@@ -48,7 +50,17 @@ export const skills = [
     icon: 'bi bi-plug',
     technologies: [
       { name: 'API REST', icon: 'devicon-fastapi-plain colored' },
+      { name: 'Slim', image: '/img/icons/slim.png' },
       { name: 'Postman', icon: 'devicon-postman-plain colored' }
+    ]
+  },
+  {
+    id: 'cloud',
+    title: 'AWS Lambda, Amazon SQS',
+    icon: 'bi bi-cloud',
+    technologies: [
+      { name: 'AWS Lambda', icon: 'bi bi-cloud-lightning', style: { color: '#ff9900' } },
+      { name: 'Amazon SQS', icon: 'bi bi-diagram-3', style: { color: '#ff9900' } }
     ]
   },
   {

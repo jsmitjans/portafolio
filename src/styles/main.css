@@ -591,7 +591,18 @@ section,
   transition: transform 0.3s ease;
 }
 
+.skills .skill-icons .skill-image {
+  height: 36px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
 .skills .skill-icons i:hover {
+  transform: scale(1.2);
+}
+
+.skills .skill-icons .skill-image:hover {
   transform: scale(1.2);
 }
 

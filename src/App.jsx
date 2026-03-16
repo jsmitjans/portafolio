@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './styles/main.css';
 
-const sectionIds = ['inicio', 'sobre-mi', 'experiencia', 'proyectos'];
+const sectionIds = ['inicio', 'sobre-mi', 'habilidades', 'experiencia', 'proyectos'];
 
 function AppContent() {
   const [loading, setLoading] = useState(true);

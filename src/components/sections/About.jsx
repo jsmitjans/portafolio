@@ -15,7 +15,7 @@ function About() {
           <div className="col-lg-8 content">
             <h2>Desarrollador Full Stack</h2>
             <p className="py-3">
-              Ingeniero en Ciencias Informáticas con más de 10 años de experiencia en desarrollo web. Especializado en la creación de soluciones escalables y optimizadas. Acostumbrado a trabajar en entornos colaborativos, fomentando el trabajo en equipo y la comunicación efectiva. Apasionado por la tecnología, con una mentalidad autodidacta y en constante aprendizaje para adaptarse a nuevas herramientas y tendencias del sector.
+              Desarrollador Full Stack con más de 10 años de experiencia construyendo plataformas web, sistemas internos e integraciones para sector público y privado. He liderado y desarrollado soluciones orientadas a gestión, analítica, onboarding, capacitación y automatización de procesos, combinando backend, frontend e integración de APIs. Aporto una mirada técnica y funcional para transformar requerimientos complejos en productos digitales escalables, mantenibles y alineados con objetivos de negocio.
             </p>
             <div className="row">
               <div className="col-lg-6">
