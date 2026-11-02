@@ -26,12 +26,14 @@ export const skills = [
   },
   {
     id: 'nodejs',
-    title: 'Node.js, Express, React.js',
+    title: 'Node.js, Express, NestJS, React.js, Next.js',
     icon: 'bi bi-server',
     technologies: [
       { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
       { name: 'Express', icon: 'devicon-express-original colored' },
-      { name: 'React.js', icon: 'devicon-react-original colored' }
+      { name: 'NestJS', icon: 'devicon-nestjs-original colored' },
+      { name: 'React.js', icon: 'devicon-react-original colored' },
+      { name: 'Next.js', icon: 'devicon-nextjs-plain' }
     ]
   },
   {
@@ -65,12 +67,13 @@ export const skills = [
   },
   {
     id: 'databases',
-    title: 'MySQL, PostgreSQL, Oracle SQL',
+    title: 'MySQL, PostgreSQL, Oracle SQL, SQL Server',
     icon: 'bi bi-database',
     technologies: [
       { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
       { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
-      { name: 'Oracle', icon: 'devicon-oracle-original colored' }
+      { name: 'Oracle', icon: 'devicon-oracle-original colored' },
+      { name: 'SQL Server', icon: 'devicon-microsoftsqlserver-plain colored' }
     ]
   },
   {

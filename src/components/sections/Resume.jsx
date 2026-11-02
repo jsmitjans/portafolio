@@ -11,8 +11,6 @@ function Resume() {
         <div className="row">
           <div className="col-12" data-aos="fade-up" data-aos-delay="100">
 
-            <h3 className="resume-title">Experiencia Laboral</h3>
-
             {experience.map((job) => (
               <div key={job.id} className="resume-item">
                 <h4>{job.title}</h4>

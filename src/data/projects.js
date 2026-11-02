@@ -1,5 +1,36 @@
 ﻿export const projects = [
   {
+    id: 'sg-riesgos',
+    title: 'Sistema Empresarial de Gestión de Riesgos',
+    company: 'Babel',
+    client: 'Sierra Gorda SCM',
+    category: 'app',
+    date: 'Marzo 2026 - Octubre 2026',
+    thumbnail: '/img/proyectos/sg-riesgos/1-login.png',
+    images: [
+      '/img/proyectos/sg-riesgos/1-login.png',
+      '/img/proyectos/sg-riesgos/2-Panel de control dueno_riesgo.png',
+      '/img/proyectos/sg-riesgos/3-admin_vista_riesgos.png',
+      '/img/proyectos/sg-riesgos/4-formulario riesgo 2.png',
+      '/img/proyectos/sg-riesgos/5-Asignacion-controles.png',
+      '/img/proyectos/sg-riesgos/6-Asignacion-controles.png.png',
+      '/img/proyectos/sg-riesgos/7-Configuracion.png',
+      '/img/proyectos/sg-riesgos/8-Tareas Programadas.png',
+      '/img/proyectos/sg-riesgos/9-reporte 1.png',
+      '/img/proyectos/sg-riesgos/10-reporte 2.png',
+      '/img/proyectos/sg-riesgos/11-reporte 3.png',
+      '/img/proyectos/sg-riesgos/12-reportes_controles.png',
+      '/img/proyectos/sg-riesgos/13-Formulario KRI 1.png',
+      '/img/proyectos/sg-riesgos/14-envio_informe_kri_por usuario.png',
+      '/img/proyectos/sg-riesgos/15-Ficha KRI.png'
+    ],
+    description: [
+      'El Sistema Empresarial de Gestión de Riesgos es la plataforma con la que Sierra Gorda, compañía minera, identifica, evalúa y da seguimiento a sus riesgos. Reúne en un solo lugar la matriz de riesgos, los controles asociados, los planes de acción y los indicadores clave de riesgo (KRI) de cada vicepresidencia, gerencia y área.',
+      'En este proyecto diseñé la estructura del sistema, incluido el modelo de datos, y participé en su desarrollo full stack (NestJS, Prisma, SQL Server y React). Implementé los flujos de evaluación de criticidad, la autoverificación de controles y el seguimiento y la recalendarización de planes de acción. También desarrollé la generación automática de documentación y su publicación en SharePoint, los reportes y paneles de control por rol, las notificaciones por correo y las tareas programadas, que se configuran y se activan o desactivan desde el propio sistema.'
+    ],
+    technologies: ['NestJS', 'Prisma', 'SQL Server', 'React']
+  },
+  {
     id: 'clave-unica-chatbot',
     title: 'Integración ClaveÚnica - Chatbot ChileValora',
     company: 'Babel',
