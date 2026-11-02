@@ -57,7 +57,7 @@ function Header({ activeSection }) {
         </Link>
 
         <div className="social-links text-center">
-          <a href="https://www.linkedin.com/in/jesus-soto-mitjans-1a5148b0/" target="_blank" rel="noopener noreferrer" className="linkedin">
+          <a href="https://www.linkedin.com/in/jesus-soto-mitjans/" target="_blank" rel="noopener noreferrer" className="linkedin">
             <i className="bi bi-linkedin"></i>
           </a>
         </div>
