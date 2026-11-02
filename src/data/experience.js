@@ -8,7 +8,8 @@ export const experience = [
     description: [
       'Participé en el proyecto Banco Integrado de Datos (BIDAT) del Ministerio de Desarrollo Social y Familia, desarrollando el módulo de visualizaciones para la generación de reportes estratégicos basados en datos como CASEN, Registro Social de Hogares y Banco Integrado de Inversión Pública, facilitando la toma de decisiones a nivel ministerial.',
       'Desarrollé el módulo de habilitación y gestión de evaluadores en el proyecto PANAL para ChileValora, mejorando la eficiencia de los procesos de certificación de competencias laborales.',
-      'Implementé la integración de Clave Única en el sistema de Chatbot de ChileValora, asegurando autenticación segura, y la integración con WhatsApp para notificaciones masivas, fortaleciendo la comunicación con los usuarios.'
+      'Implementé la integración de Clave Única en el sistema de Chatbot de ChileValora, asegurando autenticación segura, y la integración con WhatsApp para notificaciones masivas, fortaleciendo la comunicación con los usuarios.',
+      'Diseñé y desarrollé el Sistema Empresarial de Gestión de Riesgos para la minera Sierra Gorda SCM, centralizando la matriz de riesgos, los controles, los planes de acción y los indicadores KRI de cada área, permitiendo a la compañía dar un seguimiento oportuno a sus riesgos y automatizar la documentación y los reportes de gestión.'
     ]
   },
   {
